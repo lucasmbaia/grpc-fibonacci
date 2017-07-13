@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "fibonacci";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+package fibonacci;
+
+message Number {
+  int32	value = 1;
+}
+
+message	Result {
+  int32	value = 1;
+}
+
+service FibonacciService {
+  rpc Calc(Number) returns (Result) {}
+  rpc Health(google.protobuf.Empty) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      get: "/v1/health"
+    };
+  }
+}
