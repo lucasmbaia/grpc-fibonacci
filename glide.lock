@@ -1,20 +1,14 @@
 hash: 2ab6148707e0a630aed46df8beb194b75117f8ef4638458eb95b0e764da041ec
-updated: 2017-07-13T10:16:34.072194235-03:00
+updated: 2017-07-13T11:36:49.72194408-03:00
 imports:
 - name: github.com/coreos/etcd
-  version: 61fc123e7a8b14a0a258aa3f5c4159861b1ec2e7
+  version: d40982fc9160b7471cd832bff34d09e218b12e0e
   subpackages:
   - client
   - pkg/pathutil
-  - pkg/srv
   - pkg/types
-  - version
-- name: github.com/coreos/go-semver
-  version: 8ab6407b697782a06568d4b7f1db25550ec2e4c6
-  subpackages:
-  - semver
 - name: github.com/golang/protobuf
-  version: 4bd1920723d7b7c925de087aa32e2187708897f7
+  version: 0a4f71a498b7c4812f64969510bcb4eca251e33a
   subpackages:
   - jsonpb
   - proto
@@ -41,12 +35,12 @@ imports:
   subpackages:
   - coordinate
 - name: github.com/lucasmbaia/go-environment
-  version: e2e7e971c5ac076f2101eb5932c9e37bff8379dc
+  version: ec6f9773bc189533a696a376a6dd5dc7103d212b
   subpackages:
   - etcd
   - local
 - name: github.com/lucasmbaia/grpc-base
-  version: 5da8c8ed73aee36bab74ceeff41104ed00417af8
+  version: c820ee07da0df8239594723ccbf37fe8fa842567
   subpackages:
   - base
   - config
@@ -54,7 +48,7 @@ imports:
 - name: github.com/mitchellh/go-homedir
   version: b8bc1bf767474819792c23f32d8286a45736f1c6
 - name: github.com/ugorji/go
-  version: ded73eae5db7e7a0ef6f55aace87a2873c5d2b74
+  version: 5efa3251c7f7d05e5d9704a69a984ec9f1386a40
   subpackages:
   - codec
 - name: golang.org/x/net
