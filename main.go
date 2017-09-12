@@ -23,6 +23,7 @@ func main() {
   go func() {
     configCMD = base.ConfigCMD {
       SSL:		true,
+      RegisterConsul:	true,
       ServiceServer:	reflect.Indirect(reflect.ValueOf(fibonacci.RegisterFibonacciServiceServer)),
       HandlerEndpoint:  reflect.Indirect(reflect.ValueOf(fibonacci.RegisterFibonacciServiceHandlerFromEndpoint)),
       ServerConfig:     server.NewFibonacciServer(),
