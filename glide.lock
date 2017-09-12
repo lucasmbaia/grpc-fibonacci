@@ -1,5 +1,5 @@
 hash: 2ab6148707e0a630aed46df8beb194b75117f8ef4638458eb95b0e764da041ec
-updated: 2017-09-12T09:34:15.346144513-03:00
+updated: 2017-09-12T14:48:45.085685271-03:00
 imports:
 - name: github.com/apache/thrift
   version: 1744cdcb674a20c554ae9f23cb95c0c8eff63b90
@@ -69,7 +69,7 @@ imports:
   - etcd
   - local
 - name: github.com/lucasmbaia/grpc-base
-  version: ad338df95ee26ccfbe861a74f4a87b423a1b21ba
+  version: 9c9ff5fd16c7b4d9925f3f8ee085e1d8030c5246
   subpackages:
   - base
   - config
@@ -102,7 +102,7 @@ imports:
 - name: github.com/rcrowley/go-metrics
   version: 1f30fe9094a513ce4c700b9a54458bbb0c96996c
 - name: github.com/Shopify/sarama
-  version: 15174039fd207656a0f97f52bc78ec7793deeada
+  version: be3a4e355292a75fcc566f76de8bcf28befd4825
 - name: github.com/ugorji/go
   version: 8c0409fcbb70099c748d71f714529204975f6c3f
   subpackages:
@@ -118,7 +118,7 @@ imports:
   - lex/httplex
   - trace
 - name: golang.org/x/text
-  version: bd91bbf73e9a4a801adbfb97133c992678533126
+  version: acd49d43e9b95df46670431bf5c7ae59586daad8
   subpackages:
   - secure/bidirule
   - transform
