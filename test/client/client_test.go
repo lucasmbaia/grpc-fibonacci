@@ -1,6 +1,8 @@
 package main
 
 import (
+  "context"
+
   "log"
   "testing"
   "github.com/lucasmbaia/grpc-fibonacci/client"
@@ -13,11 +15,12 @@ func TestClientCalcFibonacci(t *testing.T) {
     value   fibonacci.Result
     conf    client.Config
     number  fibonacci.Number
+    ctx	    = context.Background()
   )
 
   number = fibonacci.Number{Value: 10}
 
-  if value, err = conf.CalcFibonacci(&number); err != nil {
+  if value, err = conf.CalcFibonacci(ctx, &number); err != nil {
     log.Fatalf("Error to calc fibonacci: ", err)
   }
 

@@ -1,6 +1,8 @@
 package server
 
 import (
+  "log"
+
   "golang.org/x/net/context"
   "github.com/lucasmbaia/grpc-fibonacci/proto"
   empty	"github.com/golang/protobuf/ptypes/empty"
@@ -15,6 +17,7 @@ func NewFibonacciServer() FibonnaciServer {
 func (f FibonnaciServer) Calc(ctx context.Context, v *fibonacci.Number) (*fibonacci.Result, error) {
   var n = fib(v.Value)
 
+  log.Println("PEGA NA MINHA")
   return &fibonacci.Result{Value: n}, nil
 }
 
