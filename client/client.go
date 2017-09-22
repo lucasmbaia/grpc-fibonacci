@@ -4,12 +4,14 @@ import (
   "golang.org/x/net/context"
   "google.golang.org/grpc"
   "github.com/lucasmbaia/grpc-base/config"
+  "github.com/lucasmbaia/grpc-base/zipkin"
+  "github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc"
   "github.com/lucasmbaia/grpc-fibonacci/proto"
   "google.golang.org/grpc/credentials"
 )
 
 type Config struct {
-  SSL bool
+  Collector zipkin.Collector
 }
 
 func init() {
@@ -53,10 +55,12 @@ func (c Config) connect() (*grpc.ClientConn, error) {
 
     opts = []grpc.DialOption{
       grpc.WithTransportCredentials(creds),
+      grpc.WithUnaryInterceptor(otgrpc.OpenTracingClientInterceptor(c.Collector.Tracer)),
     }
   } else {
     opts = []grpc.DialOption{
       grpc.WithInsecure(),
+      grpc.WithUnaryInterceptor(otgrpc.OpenTracingClientInterceptor(c.Collector.Tracer)),
     }
   }
 

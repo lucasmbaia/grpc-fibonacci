@@ -1,9 +1,9 @@
 package server
 
 import (
+  "log"
   "golang.org/x/net/context"
-  "github.com/lucasmbaia/grpc-base/zipkin"
-  "github.com/lucasmbaia/grpc-base/utils"
+  //"github.com/lucasmbaia/grpc-base/utils"
   "github.com/lucasmbaia/grpc-fibonacci/proto"
   empty	"github.com/golang/protobuf/ptypes/empty"
 )
@@ -16,24 +16,25 @@ func NewFibonacciServer() FibonnaciServer {
 
 func (f FibonnaciServer) Calc(ctx context.Context, v *fibonacci.Number) (*fibonacci.Result, error) {
   var (
-    c	zipkin.Collector
-    s	zipkin.Span
-    err	error
+    //err	error
   )
 
-  if c, s, err = zipkin.OpenZipkin(ctx, "GRPC Server"); err != nil {
-    return new(fibonacci.Result), err
-  }
-  defer c.Conn.Close()
+  log.Println(ctx)
 
-  s.Event([]string{"GRPC Server Receive"})
-  s.Tag("Args Receive", utils.ConvertArgsToString(v))
+  //s = zipkin.OpenChildSpan(ctx, "GRPC Server", tags, nil)
+  //if c, s, err = zipkin.OpenZipkin(ctx, "GRPC Server"); err != nil {
+  //return new(fibonacci.Result), err
+  //}
+  //defer c.Conn.Close()
+
+  ///s.Event([]string{"GRPC Server Receive"})
+  //s.Tag("Args Receive", utils.ConvertArgsToString(v))
 
   var n = fib(v.Value)
 
-  s.Event([]string{"GRPC Server Send"})
-  s.Tag("Args Send", utils.ConvertArgsToString(fibonacci.Result{Value: n}))
-  s.Span.Finish()
+  //s.Event([]string{"GRPC Server Send"})
+  //s.Tag("Args Send", utils.ConvertArgsToString(fibonacci.Result{Value: n}))
+  //s.Span.Finish()
 
   return &fibonacci.Result{Value: n}, nil
 }
