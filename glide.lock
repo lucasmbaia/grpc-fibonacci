@@ -1,12 +1,12 @@
-hash: d317b8c40ad7413b8e331debcee1c853c6d05b902d9685db8474364401925f4b
-updated: 2017-10-09T16:52:30.113932307-03:00
+hash: 6b4cd9b232b47ccc3ad977a5c08fb83ed709f116dde3e90c63f762342bdba1fe
+updated: 2017-10-16T11:47:04.94143481-02:00
 imports:
 - name: github.com/apache/thrift
-  version: 9f9e30b51e3912c0b63258badf5501d3cb2550be
+  version: 8b8a8efea13d1c97f856053af0a5c0e6a8a76354
   subpackages:
   - lib/go/thrift
 - name: github.com/coreos/etcd
-  version: bb66589f8cf18960c7f3d56b1b83753caeed9c7a
+  version: b989e1992fb1186c7a6a5ea9291fae888a3d7971
   subpackages:
   - client
   - pkg/pathutil
@@ -36,7 +36,7 @@ imports:
   subpackages:
   - proto
 - name: github.com/golang/protobuf
-  version: 4bd1920723d7b7c925de087aa32e2187708897f7
+  version: 5a0f697c9ed9d68fef0116532c6e05cfeae00e55
   subpackages:
   - jsonpb
   - proto
@@ -60,7 +60,7 @@ imports:
   subpackages:
   - go/otgrpc
 - name: github.com/hashicorp/consul
-  version: 0075421b1ab97a663ccf8dd3cb796ad44dcec133
+  version: d5b945ccee2acc938acba3bfb524af71aaecbf08
   subpackages:
   - api
 - name: github.com/hashicorp/go-cleanhttp
@@ -74,12 +74,12 @@ imports:
 - name: github.com/kr/logfmt
   version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/lucasmbaia/go-environment
-  version: 8041d83ee56b2fab09e43f9f5008e87c72b4997c
+  version: 7bca66e26f46c1e6cf78426c64f4a59a1756faa1
   subpackages:
   - etcd
   - local
 - name: github.com/lucasmbaia/grpc-base
-  version: 1e23444c746fbaf0412d96e3ab224f5f30850c78
+  version: 416633893d75bc7f2518eb6819242d25729fd4e6
   subpackages:
   - base
   - config
@@ -114,7 +114,7 @@ imports:
 - name: github.com/Shopify/sarama
   version: 70f6a705d4a17af059acbc6946fb2bd30762acd7
 - name: github.com/ugorji/go
-  version: ded73eae5db7e7a0ef6f55aace87a2873c5d2b74
+  version: 54210f4e076c57f351166f0ed60e67d3fca57a36
   subpackages:
   - codec
 - name: golang.org/x/net
@@ -128,7 +128,7 @@ imports:
   - lex/httplex
   - trace
 - name: golang.org/x/text
-  version: 825fc78a2fd6fa0a5447e300189e3219e05e1f25
+  version: b19bf474d317b857955b12035d2c5acb57ce8b01
   subpackages:
   - secure/bidirule
   - transform
@@ -140,7 +140,7 @@ imports:
   - googleapis/api/annotations
   - googleapis/rpc/status
 - name: google.golang.org/grpc
-  version: 06233310cc312165d1a5e8c1a7bb4cb51c7f402b
+  version: c209cdff16049a924bef4aa5c6f7588f0b42b2fa
   subpackages:
   - balancer
   - codes
