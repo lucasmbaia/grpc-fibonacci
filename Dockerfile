@@ -1,7 +1,7 @@
 FROM golang
-MAINTAINER grpc-fibonnaci
+MAINTAINER grpc-fibonacci
 RUN mkdir /app
-ADD grpc-fibonnaci /app/
+ADD grpc-fibonacci /app/
 WORKDIR /app
 EXPOSE 5000
-CMD ["/app/grpc-fibonnaci"]
+CMD ["/app/grpc-fibonacci"]
