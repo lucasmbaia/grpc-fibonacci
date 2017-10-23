@@ -1,7 +1,7 @@
 FROM golang
-MAINTAINER fibonacci
+MAINTAINER fibonnaci
 RUN mkdir /app
-ADD fibonacci /app/
+ADD fibonnaci /app/
 WORKDIR /app
 EXPOSE 5000
-CMD ["/app/fibonacci"]
+CMD ["/app/fibonnaci"]
