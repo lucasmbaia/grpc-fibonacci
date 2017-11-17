@@ -6,5 +6,5 @@ ADD pkcs8.key /app/
 ADD cacert.pem /app/
 ADD nuvem-intera.local.pem /app/
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 9000
 CMD ["/app/fibonacci"]
